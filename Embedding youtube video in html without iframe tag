@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>youtube</title>
+</head>
+<body>
+	<div id="p1"   ></div>
+	<div id="player2"  ></div>
+	<div id="player3" ></div>
+
+<script type="text/javascript"></script>
+<script>
+			// This code loads the IFrame Player API code asynchronously.
+			var tag = document.createElement('script');
+			tag.src = "http://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			var player1,player2,player3;
+			function onYouTubeIframeAPIReady() {
+
+				player1 = new YT.Player('p1', {
+					height: '400',
+					width: '400',
+					videoId: '8jm_56vtUhM',
+					playerVars: { 'showinfo': 0 , 'autohide':1 , 'color':'white' , 'rel':0},
+
+					events: {
+
+				
+						//'onReady' : function_name
+					}
+
+				});
+				player2 = new YT.Player('player2', {
+					height: '400',
+					width: '400',
+					videoId: 'oRYshQCOHOs',
+					playerVars: { 'showinfo': 0 , 'autohide':1 , 'color':'white' , 'rel':0},
+					events: {
+				
+					}
+
+				});
+				player3 = new YT.Player('player3', {
+					height: '400',
+					width: '400',
+					videoId: 'zaqfuMbd06I',
+					playerVars: { 'showinfo': 0 , 'autohide':1 , 'color':'white'  , 'rel':0},
+					events: {
+					
+					}
+				});
+			}
+
+
+
+		</script>
+</body>
+</html>
